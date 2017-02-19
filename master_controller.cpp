@@ -55,7 +55,9 @@ int *create_pipe() {
   if (pipe(file_designators)) {
     perror("Pipe failed in create_pipe");
   }
-  return file_desi
+  return file_designators; 
+}
+
 int main(int argc, char *argv[]) {
   // create pipes to pass data between this process and its children
 	const int num_pipes=6; 
